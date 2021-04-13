@@ -4,7 +4,190 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
     <title>Microverse-Checkpoint</title>
   </head>
-  <body></body>
+  <body>
+    <nav class="nav-bar">
+      <div>
+        <img
+          class="menu-img"
+          src="https://pics.freeicons.io/uploads/icons/png/15211315791553239378-512.png"
+          alt="menu"
+        />
+        <img
+          class="youtube-img"
+          src="data:image/png;base64,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"
+          alt="YouTube"
+        />
+      </div>
+      <div>
+        <input type="text" class="search-field" placeholder="Search" />
+        <img
+          class="icon-img"
+          src="https://icons-for-free.com/iconfiles/png/512/voice+icon-1320183328753591744.png"
+          alt="voice"
+        />
+      </div>
+      <div>
+        <img
+          class="icon-img"
+          src="https://as2.ftcdn.net/jpg/02/28/25/39/500_F_228253920_JDxct27B2o2dGP4YYLug6XYTGphQZDji.jpg"
+          alt="video avatar"
+        />
+        <img
+          class="icon-img"
+          src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png"
+          alt="apps"
+        />
+        <img
+          class="icon-img"
+          src="data:image/png;base64,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"
+          alt=""
+        />
+      </div>
+    </nav>
+    <section class="grid-container">
+      <div class="item1">
+        <iframe
+          src="https://www.youtube.com/embed/V74l_zS1x8E"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <h4>Contributing to Open Source Part I: The Easy Way</h4>
+        <p>62,685 views•Feb 28, 2014 461 19 SHARE SAVE</p>
+        <hr />
+        <div class="flex-container">
+          <div class="item1-desc">
+            <img class="item1-desc-avatar"
+            https://yt3.ggpht.com/ytc/AAUvwngTB0u1X0cJ421cDC4OTKcRQjAWj_CvkgUTHA=s48-c-k-c0x00ffffff-no-rj://yt3.ggpht.com/ytc/AAUvwngTB0u1X0cJ421cDC4OTKcRQjAWj_CvkgUTHA=s48-c-k-c0x00ffffff-no-rj
+            src="https://yt3.ggpht.com/ytc/AAUvwngTB0u1X0cJ421cDC4OTKcRQjAWj_CvkgUTHA=s48-c-k-c0x00ffffff-no-rj"
+            alt="Avatar" />
+          </div>
+          <div class="item2-desc">
+            <h5>Contributing to Open Source Part I: The Easy Way</h5>
+            <p>62,685 views•Feb 28, 2014 461 19 SHARE SAVE</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, quia? Voluptate dicta totam quo rem atque magni,
+              quasi iste nisi placeat quos, dignissimos est eos laudantium, modi
+              fugiat. Id, excepturi!
+            </p>
+          </div>
+          <div class="item3-desc">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item2">
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/mENDYhfxH-o"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>Contributing to Open Source Part II: The Real Way</h4>
+            <a href="#"> The Odin Project</a>
+            <p>37,809 views•Mar 1, 2014</p>
+          </div>
+        </aside>
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/hdI2bqOjy3c"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>JavaScript Crash Course For Beginners</h4>
+            <a href="#">Traversy Media</a>
+            <p>3.8M views 1 month ago</p>
+          </div>
+        </aside>
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/-56x56UppqQ?start=17"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>MongoDB crash course</h4>
+            <a href="#">Traversy Media</a>
+            <p>8.8M views 1 month ago</p>
+          </div>
+        </aside>
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/dOGstZnCrmI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>Don Schenck - OMG How Do I Start An Open Source Project??</h4>
+            <a href="#">Code on the beach</a>
+            <p>3.5M views 1 year ago</p>
+          </div>
+        </aside>
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/6FOq4cUdH8k"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>Node.js With Passport Authentication | Full Project</h4>
+            <a href="#">Traversy Media</a>
+            <p>552K views 2 years ago</p>
+          </div>
+        </aside>
+        <aside class="flex-display">
+          <div className="thumbnail">
+            <iframe
+              class="thumbnail-video"
+              src="https://www.youtube.com/embed/sb7DHMFdNKE?start=17"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="thumbnail-text">
+            <h4>Contributing to Open Source on GitHub for beginners</h4>
+            <a href="#">Kent C. Dodds</a>
+            <p>6.8M views 1 month ago</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section></section>
+    <footer class="footer"></footer>
+  </body>
 </html>
